@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "AnimeFLV",
+  "author": "FrankSiret",
+  "description": "[hack-life] Download animes from animeflv.net with only one click, avoid link shorteners. Developed by FrankSiret",
+  "version": "1.3",
+  "icons": {
+    "32": "images/icon_32.png",
+    "128": "images/icon_128.png"
+  },
+  "permissions": [
+    "\u003Call_urls>",
+    "file:///*/*"
+  ],
+  "browser_action": {
+    "default_icon": "images/icon_32.png",
+    "default_title": "Download from AnimeFLV"
+  },
+  "homepage_url": "https://github.com/FrankSiret/animeflv-chrome-extension",
+  "update_url": "https://github.com/FrankSiret/animeflv-chrome-extension",
+  "content_scripts": [{
+    "js": [
+      "main.js"
+    ],
+    "css": [
+      "styles/tab/styles.css"
+    ],
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "all_frames": true
+  }]
+}
